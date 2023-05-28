@@ -1,8 +1,14 @@
-import MyLibrary from "../lib";
-const myLibraryInstance = new MyLibrary();
+import VideoAnalytics from "../lib";
 
-document.querySelector("body").innerHTML = `<h1>Hello World!</h1>`;
 
-console.log("myLibraryInstance", myLibraryInstance);
 
-myLibraryInstance.myMethod(); 
+console.log();
+
+
+//add a video to the body to test the library
+document.querySelector("body").innerHTML += `<video id="video" controls src="${__dirname}/video.mp4"></video>`;
+window.videoAnalyticsInstance = new VideoAnalytics('video');
+
+console.log("videoAnalyticsInstance", videoAnalyticsInstance);
+
+videoAnalyticsInstance.myMethod();

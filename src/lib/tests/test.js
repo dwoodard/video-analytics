@@ -1,5 +1,12 @@
-import MyLibrary from '../index';
+import VideoAnalytics from '../index';
 
 test('Runs without crashing', () => {
-  new MyLibrary();
+    new VideoAnalytics();
+});
+
+
+// It takes a query selector
+test('Takes a query selector', () => {
+    const videoAnalyticsInstance = new VideoAnalytics();
+    expect(videoAnalyticsInstance).toHaveProperty('selector');
 });
